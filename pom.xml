@@ -42,7 +42,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>jenkins-docker-integration-sample</finalName>
+		<finalName>sb-app</finalName>
 	</build>
 
 </project>
