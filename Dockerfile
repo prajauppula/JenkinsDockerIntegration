@@ -1,4 +1,5 @@
-FROM openjdk:8
-EXPOSE 8080
-ADD target/jenkins-docker-integration-sample.jar target\jenkins-docker-integration-sample.jar
-ENTRYPOINT [ "java","-jar","/jenkins-docker-integration-sample.jar" ]
+FROM java:8-jdk-alpine
+COPY ./target/sb-app.jar /usr/app/
+WORKDIR /usr/app
+RUN sh -c 'touch sb-app.jar'
+ENTRYPOINT [ "java","-jar","sb-app.jar" ]
